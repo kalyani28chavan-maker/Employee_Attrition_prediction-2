@@ -2,7 +2,9 @@
 import streamlit as st
 import pandas as pd
 import joblib
-
+import sys
+st.write("Python version:", sys.version)
+st.write("Installed joblib:", __import__("importlib").util.find_spec("joblib"))
 # Load trained files
 model = joblib.load("employee_attrition_model.pkl")
 columns = joblib.load("model_columns.pkl")
